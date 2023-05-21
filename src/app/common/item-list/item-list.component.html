@@ -1,0 +1,8 @@
+<ul class="list-group">
+    <li *ngFor="let pickup of stockList$" class="list-group-item">
+        {{pickup.title}}
+        <button (click)="onRemovePickup(pickup)" style="float: right" class="btn btn-danger">
+            <i class="fa fa-trash"></i>
+        </button>
+    </li>
+</ul>
