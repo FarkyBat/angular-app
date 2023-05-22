@@ -11,13 +11,13 @@ import { StockService } from 'src/app/service/stock.service';
 })
 export class ItemListComponent{
   stockService1 = inject(StockService);
-  stockList$ = this.stockService1.list$; //getAll()
+  stockList$ = this.stockService1.getAll();
 
 
   onRemovePickup(pickup: Pickup): void{
     if(!confirm('U sure?')){
       return;
     }
-    this.stockService1.delete(pickup.id).subscribe(() => this.stockList$ = this.stockService1.list$) //getAll()
+    this.stockService1.delete(pickup.id).subscribe(() => this.stockList$ = this.stockService1.getAll())
   }
 }
