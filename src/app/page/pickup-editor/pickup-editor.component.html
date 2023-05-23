@@ -1,0 +1,29 @@
+<div class="row" *ngIf="pickup$ | async as pickup">
+    <div class="col-6 offset-3">
+        <form (ngSubmit)="onUpdate(pickup)">
+            <div class="form-group">
+                <label for="">Title</label>
+                <input name="title" [(ngModel)]="pickup.title" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Total pages</label>
+                <input name="totalPages" [(ngModel)]="pickup.totalPages" type="number" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Author</label>
+                <input name="author" [(ngModel)]="pickup.author" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Currency</label>
+                <input name="price.currency" [(ngModel)]="pickup.price.currency" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Price</label>
+                <input name="price.value" [(ngModel)]="pickup.price.value" type="number" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">
+                <i class="fa fa-save"></i> update
+            </button>
+        </form>
+    </div>
+</div>

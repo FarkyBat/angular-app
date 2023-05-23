@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './page/home/home.component';
 import { AdminComponent } from './page/admin/admin.component';
+import { PickupEditorComponent } from './page/pickup-editor/pickup-editor.component';
 
 const routes: Routes = [
   {
@@ -11,11 +12,11 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
-  }/*,
+  },
   {
     path: 'admin/pickup/edit/:id',
     component: PickupEditorComponent
-  }*/
+  }
 ];
 
 @NgModule({

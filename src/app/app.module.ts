@@ -9,6 +9,8 @@ import { ItemListComponent } from './common/item-list/item-list.component';
 import { StatComponent } from './common/stat/stat.component';
 import { HomeComponent } from './page/home/home.component';
 import { AdminComponent } from './page/admin/admin.component';
+import { PickupEditorComponent } from './page/pickup-editor/pickup-editor.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { AdminComponent } from './page/admin/admin.component';
     StatComponent,
     HomeComponent,
     AdminComponent,
+    PickupEditorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
